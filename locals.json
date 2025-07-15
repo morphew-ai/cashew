@@ -1,9 +1,10 @@
 {
   "BELLA PAULISTA         SAO PAULO     BRA" : ["Bella Paulista", "Alimentacao"], 
   "CAFE DO PONTO          SAO PAULO     BRA" : ["Cafe do Ponto", "Alimentacao"], 
-  "GN CAFE                SAO PAULO     BRA": ["Athenas Padaria", "Alimentacao"], 
-  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
-  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
+  "GN CAFE                SAO PAULO     BRA" : ["Athenas Café", "Alimentacao"], 
+  "ATHENAS CAFE           SAO PAULO     BRA" : ["Athenas Restaurante", "Alimentacao"],
+  "ATHENAS RESTAURANTE    SAO PAULO     BRA" : ["Athenas Pizza", "Alimentacao"],
+  "NUTRICAR               SANTANA DE PA BRA" : ["Nutricar C6", "Alimentacao"],
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
 
@@ -12,7 +13,9 @@
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
   "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
-  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
+
+  "Wellhub Gympass BR Gym Sao Paulo     BRA" : ["Gympass", "Saude"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Saude"],
 
   "PETZ ANGELICA          SAO PAULO     BRA" : ["Petz", "Pets"], 
 }
