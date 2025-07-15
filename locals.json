@@ -1,1 +1,18 @@
-{}
+{
+  "BELLA PAULISTA         SAO PAULO     BRA" : ["Bella Paulista", "Alimentacao"], 
+  "CAFE DO PONTO          SAO PAULO     BRA" : ["Cafe do Ponto", "Alimentacao"], 
+  "GN CAFE                SAO PAULO     BRA": ["Athenas Padaria", "Alimentacao"], 
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Alimentacao"],
+
+  "LORD BYRON             SAO PAULO     BRA" : ["Lord Byron", "Entretenimento"], 
+  "ABC BAR                SAO PAULO     BRA" : ["ABC Bailão", "Entretenimento"], 
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" : ["xxxxxxxxxx", "Entretenimento"],
+
+  "PETZ ANGELICA          SAO PAULO     BRA" : ["Petz", "Pets"], 
+}
