@@ -40,7 +40,7 @@ var value = match[2].replace('.','').replace(',','.');
 var date = match[3];
 var hour = match[4];
 var local = match[5];
-var notes = `Cartao: ${card}\nValor: ${value}\nData: ${date}\nHora: ${hour}\nEstabelecimento: ${local}\nMapa: ${pixMap}`;
+var notes = `Cartao: ${card}\nValor: ${value}\nData: ${date}\nHora: ${hour}\nEstabelecimento: ${local}\nMapa: ${gl_map_url}`;
 
 // Converte data e hora para ISO 8601
 var splittedDate = date.split('/');
@@ -58,7 +58,7 @@ var category = cards[card]?.[1] ?? 'Indefinido';
 var merchant = locals[local.toUpperCase()]?.[0] ?? local;
 var subcategory = locals[local.toUpperCase()]?.[1] ?? 'Indefinido';
   
-var jsonData = {
+var cashew_data = {
         amount: '-' + value,
         title: '[' + merchant + ']',
         category: category,
@@ -68,4 +68,4 @@ var jsonData = {
         notes: notes
     };
 
-var params = new URLSearchParams(jsonData).toString();
+var params = new URLSearchParams(cashew_data).toString();
