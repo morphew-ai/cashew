@@ -20,7 +20,7 @@ var locals = {
   'ATHENAS CAFE           SAO PAULO     BRA' : ['Athenas Restaurante', 'Alimentacao'],
   'ATHENAS RESTAURANTE    SAO PAULO     BRA' : ['Athenas Pizza', 'Alimentacao'],
   'NUTRICAR               SANTANA DE PA BRA' : ['Nutricar C6', 'Alimentacao'],
-  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Alimentacao'],
+  'PAYGO*GRAND COFFEE     Sao Paulo     BRA' : ['Lanchonete C6', 'Alimentacao'],
   'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Alimentacao'],
   'LORD BYRON             SAO PAULO     BRA' : ['Lord Byron', 'Entretenimento'], 
   'ABC BAR                SAO PAULO     BRA' : ['ABC Bailão', 'Entretenimento'], 
