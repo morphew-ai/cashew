@@ -31,6 +31,7 @@ var locals = {
   'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento'],
   'PETZ ANGELICA          SAO PAULO     BRA' : ['Petz', 'Pets'], 
   'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento'],
+  'Google One             SAO PAULO     BRA' : ['Google', 'Digital'],
 }
 
 var regex = /Sua compra no cartão final (\d{4}) no valor de R\$ (.+,.+), dia (\d{2}\/\d{2}\/\d{4}) às (\d{2}:\d{2}), em (.*?), foi aprovada./;
