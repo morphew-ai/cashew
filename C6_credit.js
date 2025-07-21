@@ -14,24 +14,24 @@ var cards = {
 };
 
 var locals = {
-  'BELLA PAULISTA         SAO PAULO     BRA' : ['Bella Paulista', 'Alimentacao'], 
-  'CAFE DO PONTO          SAO PAULO     BRA' : ['Cafe do Ponto', 'Alimentacao'], 
-  'GN CAFE                SAO PAULO     BRA' : ['Athenas Café', 'Alimentacao'], 
-  'ATHENAS CAFE           SAO PAULO     BRA' : ['Athenas Restaurante', 'Alimentacao'],
-  'ATHENAS RESTAURANTE    SAO PAULO     BRA' : ['Athenas Pizza', 'Alimentacao'],
-  'NUTRICAR               SANTANA DE PA BRA' : ['Nutricar C6', 'Alimentacao'],
-  'PAYGO*GRAND COFFEE     Sao Paulo     BRA' : ['Lanchonete C6', 'Alimentacao'],
-  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Alimentacao'],
-  'LORD BYRON             SAO PAULO     BRA' : ['Lord Byron', 'Entretenimento'], 
-  'ABC BAR                SAO PAULO     BRA' : ['ABC Bailão', 'Entretenimento'], 
-  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento'],
-  'Wellhub Gympass BR Gym Sao Paulo     BRA' : ['Gympass', 'Saude'],
-  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Saude'],
-  'PAYPAL      *UBER BR   SAO PAULO     BRA' : ['Uber', 'Transporte'],
-  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento'],
-  'PETZ ANGELICA          SAO PAULO     BRA' : ['Petz', 'Pets'], 
-  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento'],
-  'Google One             SAO PAULO     BRA' : ['Google', 'Digital'],
+  'BELLA PAULISTA         SAO PAULO     BRA' : ['Bella Paulista', 'Alimentacao', 'Almoço/Jantar'], 
+  'CAFE DO PONTO          SAO PAULO     BRA' : ['Cafe do Ponto', 'Alimentacao', 'Almoço/Jantar'], 
+  'GN CAFE                SAO PAULO     BRA' : ['Athenas Café', 'Alimentacao', 'Almoço/Jantar'], 
+  'ATHENAS CAFE           SAO PAULO     BRA' : ['Athenas Restaurante', 'Alimentacao', 'Almoço/Jantar'],
+  'ATHENAS RESTAURANTE    SAO PAULO     BRA' : ['Athenas Pizza', 'Alimentacao', 'Almoço/Jantar'],
+  'NUTRICAR               SANTANA DE PA BRA' : ['Nutricar C6', 'Alimentacao', 'Café'],
+  'PAYGO*GRAND COFFEE     Sao Paulo     BRA' : ['Lanchonete C6', 'Alimentacao', 'Almoço/Café'],
+  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Alimentacao', ''],
+  'LORD BYRON             SAO PAULO     BRA' : ['Lord Byron', 'Entretenimento', 'Balada'], 
+  'ABC BAR                SAO PAULO     BRA' : ['ABC Bailão', 'Entretenimento', 'Balada'], 
+  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento', ''],
+  'Wellhub Gympass BR Gym Sao Paulo     BRA' : ['Gympass', 'Saude', 'Academia'],
+  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Saude', ''],
+  'PAYPAL      *UBER BR   SAO PAULO     BRA' : ['Uber', 'Transporte', ''],
+  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento', ''],
+  'PETZ ANGELICA          SAO PAULO     BRA' : ['Petz', 'Pets', ''],
+  'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' : ['xxxxxxxxxx', 'Entretenimento', ''],
+  'Google One             SAO PAULO     BRA' : ['Google', 'Digital', ''],
 }
 
 var regex = /Sua compra no cartão final (\d{4}) no valor de R\$ (.+,.+), dia (\d{2}\/\d{2}\/\d{4}) às (\d{2}:\d{2}), em (.*?), foi aprovada./;
@@ -58,10 +58,11 @@ var category = cards[card]?.[1] ?? 'Indefinido';
 
 var merchant = locals[local.toUpperCase()]?.[0] ?? local;
 var subcategory = locals[local.toUpperCase()]?.[1] ?? 'Indefinido';
+var details = locals[local.toUpperCase()]?.[2] ?? 'Indefinido';
   
 var cashew_data = {
         amount: '-' + value,
-        title: '[' + merchant + ']',
+        title: '[' + merchant + '] ' + details,
         category: category,
         subcategory: subcategory,
         date: isoDate,
