@@ -6,7 +6,7 @@ var date = match[3];
 
 // Converte data e hora para ISO 8601
 var splittedDate = date.split('/');
-var isoDate = `${splittedDate[2]}-${splittedDate[1]}-${splittedDate[0]}T$00:00:00`;
+var isoDate = `${splittedDate[2]}-${splittedDate[1]}-${splittedDate[0]}T00:00:00`;
 
 var airtable_data = {
   records: [
