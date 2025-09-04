@@ -5,6 +5,35 @@
 // output:
 // params
 
+var regex = /Sua compra no cartão final (\d{4}) no valor de R\$ (.+,.+), dia (\d{2}\/\d{2}\/\d{4}) às (\d{2}:\d{2}), em (.*?), foi aprovada./;
+var match = body.match(regex);
+var card = match[1];
+var amount = match[2].replace('.','').replace(',','.');
+var date = match[3];
+var hour = match[4];
+var local = match[5];
+
+// Converte data e hora para ISO 8601
+var splittedDate = date.split('/');
+var isoDate = `${splittedDate[2]}-${splittedDate[1]}-${splittedDate[0]}T${hour}:00`;
+
+var airtable_data = {
+  records: [
+    {
+      fields: {
+        Type: 'Credit Card',
+        Card: card,
+        Amount: amount,
+        Payee: local,
+        Date: isoDate,
+        Latitude: gl_latitude,
+        Longitude: gl_longitude,
+        mapUrl: gl_map_url 
+      }
+    }
+  ]
+}
+
 var cards = {
     '8982': ['Cartao C6 Pessoal', 'Pessoal'],
     '2270': ['Cartao C6 Pessoal', 'Pessoal'],
@@ -34,34 +63,17 @@ var locals = {
   'Google One             SAO PAULO     BRA' : ['Google', 'Digital', ''],
 }
 
-var regex = /Sua compra no cartão final (\d{4}) no valor de R\$ (.+,.+), dia (\d{2}\/\d{2}\/\d{4}) às (\d{2}:\d{2}), em (.*?), foi aprovada./;
-var match = body.match(regex);
-var card = match[1];
-var value = match[2].replace('.','').replace(',','.');
-var date = match[3];
-var hour = match[4];
-var local = match[5];
-var notes = `Cartao: ${card}\nValor: ${value}\nData: ${date}\nHora: ${hour}\nEstabelecimento: ${local}\nMapa: ${gl_map_url}`;
-
-// Converte data e hora para ISO 8601
-var splittedDate = date.split('/');
-var isoDate = `${splittedDate[2]}-${splittedDate[1]}-${splittedDate[0]}T${hour}:00`;
-
-var cartoes = {
-    '0138': 'Cartao C6 Vilacare',
-    '8520': 'Cartao C6 Gelagoela',
-    '3169': 'Cartao C6 Gelagoela',
-};
-
 var account = cards[card]?.[0] ?? 'Caixa';
 var category = cards[card]?.[1] ?? 'Indefinido';
 
 var merchant = locals[local.toUpperCase()]?.[0] ?? local;
 var subcategory = locals[local.toUpperCase()]?.[1] ?? 'Indefinido';
 var details = locals[local.toUpperCase()]?.[2] ?? 'Indefinido';
-  
+
+var notes = `Cartao: ${card}\nValor: ${amount}\nData: ${date}\nHora: ${hour}\nEstabelecimento: ${local}\nMapa: ${gl_map_url}`;
+
 var cashew_data = {
-        amount: '-' + value,
+        amount: '-' + amount,
         title: '[' + merchant + '] ' + details,
         category: category,
         subcategory: subcategory,
@@ -69,5 +81,6 @@ var cashew_data = {
         account: account,
         notes: notes
     };
+
 
 var params = new URLSearchParams(cashew_data).toString();
