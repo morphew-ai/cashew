@@ -23,11 +23,11 @@ var airtable_data = {
       fields: {
         Type: 'Credit Card',
         Card: card,
-        Amount: amount,
+        Amount: parseFloat(amount),
         Payee: local,
         Date: isoDate,
-        Latitude: gl_latitude,
-        Longitude: gl_longitude,
+        Latitude: parseFloat(gl_latitude),
+        Longitude: parseFloat(gl_longitude),
         MapUrl: gl_map_url 
       }
     }
