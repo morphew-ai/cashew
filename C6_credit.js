@@ -21,7 +21,7 @@ var airtable_data = {
   records: [
     {
       fields: {
-        Type: 'Credit Card',
+        PaymentType: 'Credito',
         Card: card,
         Amount: parseFloat(amount),
         Payee: local,
