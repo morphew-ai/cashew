@@ -12,7 +12,7 @@ var airtable_data = {
   records: [
     {
       fields: {
-        Type: 'PIX',
+        PaymentType: 'PIX',
         Amount: amount,
         Payee: payee,
         Date: isoDate,
