@@ -1,5 +1,5 @@
 var regex = /R\$ (.+,.+), para (.*?), em (\d{2}\/\d{2}\/\d{4})/;
-var match = texto.match(regex);
+var match = body.match(regex);
 var amount = match[1].replace('.','').replace(',','.');
 var payee = match[2];
 var date = match[3];
