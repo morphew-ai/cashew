@@ -25,17 +25,3 @@ var airtable_data = {
 }
 
 var airtable_json = JSON.stringify(airtable_data, null, 2);
-
-var title = payee;
-var notes = `Destinatario: ${payee}\nValor: ${amount}\nData: ${date}\nMapa: ${gl_map_url}`;
-
-var cashew_data = {
-        amount: '-' + amount,
-        title: title,
-        category: 'Indefinido',
-        date: isoDate,
-        notes: notes
-    };
-
-
-var params = new URLSearchParams(cashew_data).toString();
