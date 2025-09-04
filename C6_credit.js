@@ -28,7 +28,7 @@ var airtable_data = {
         Date: isoDate,
         Latitude: gl_latitude,
         Longitude: gl_longitude,
-        mapUrl: gl_map_url 
+        MapUrl: gl_map_url 
       }
     }
   ]
