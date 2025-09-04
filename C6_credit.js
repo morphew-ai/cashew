@@ -34,6 +34,8 @@ var airtable_data = {
   ]
 }
 
+var airtable_json = JSON.stringify(airtable_data, null, 2);
+
 var cards = {
     '8982': ['Cartao C6 Pessoal', 'Pessoal'],
     '2270': ['Cartao C6 Pessoal', 'Pessoal'],
