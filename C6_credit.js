@@ -21,18 +21,17 @@ var airtable_data = {
   records: [
     {
       fields: {
-        PaymentType: 'Credito',
-        Card: card,
-        Amount: parseFloat(amount),
-        Payee: local,
-        Date: isoDate,
-        Latitude: parseFloat(gl_latitude),
-        Longitude: parseFloat(gl_longitude),
-        MapUrl: gl_map_url 
+        'Final do Cartão': card,
+        'Valor (em R$)': parseFloat(amount),
+        'Descrição': local,
+        'Data de Compra': isoDate,
+        'Latitude': parseFloat(gl_latitude),
+        'Longitude': parseFloat(gl_longitude),
+        'MapUrl': gl_map_url 
       }
     }
   ]
-}
+}'
 
 var airtable_json = JSON.stringify(airtable_data, null, 2);
 
