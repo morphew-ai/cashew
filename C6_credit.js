@@ -31,7 +31,7 @@ var airtable_data = {
       }
     }
   ]
-}'
+}
 
 var airtable_json = JSON.stringify(airtable_data, null, 2);
 
