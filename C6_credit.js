@@ -21,13 +21,13 @@ var airtable_data = {
   records: [
     {
       fields: {
-        'Final do Cartão': card,
-        'Valor (em R$)': parseFloat(amount),
-        'Descrição': local,
-        'Data de Compra': isoDate,
-        'Latitude': parseFloat(gl_latitude),
-        'Longitude': parseFloat(gl_longitude),
-        'MapUrl': gl_map_url 
+        "Final do Cartão": card,
+        "Valor (em R$)": parseFloat(amount),
+        "Descrição": local,
+        "Data de Compra": isoDate,
+        "Latitude": parseFloat(gl_latitude),
+        "Longitude": parseFloat(gl_longitude),
+        "MapUrl": gl_map_url 
       }
     }
   ]
