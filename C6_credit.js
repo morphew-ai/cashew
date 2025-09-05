@@ -24,7 +24,8 @@ var airtable_data = {
         "Final do Cartão": card,
         "Valor (em R$)": parseFloat(amount),
         "Descrição": local,
-        "Data de Compra": isoDate,
+        "Data de Compra": date,
+        "Hora de Compra": hour,
         "Latitude": parseFloat(gl_latitude),
         "Longitude": parseFloat(gl_longitude),
         "MapUrl": gl_map_url 
